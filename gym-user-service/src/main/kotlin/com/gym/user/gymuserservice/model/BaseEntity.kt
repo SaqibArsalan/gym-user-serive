@@ -17,7 +17,6 @@ open class BaseEntity(id: String? = null) : Serializable {
     @Id
     @Column(name = "id")
     var id: @Size(max = 200) String?
-        protected set
 
     @CreatedDate
     @Column(name = "created_at", updatable = false)
