@@ -6,11 +6,11 @@ import com.gym.user.gymuserservice.model.User
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class UserCreationRequestDto(
-    var fullName: String,
-    var phoneNumber: String,
-    var emailAddress: String,
-    var password: String,
-    var accountStatus: String
+    val fullName: String,
+    val phoneNumber: String,
+    val emailAddress: String,
+    val password: String,
+    val accountStatus: String
 ) {
     companion object {
         fun toUser(user: UserCreationRequestDto): User {
