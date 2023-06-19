@@ -15,5 +15,11 @@ class UserController(val userService: UserService) {
     @PutMapping("/{userId}")
     fun updateUser(@RequestBody user: UserUpdateRequestDto, @PathVariable userId: String) = userService.updateUser(user, userId)
 
+    @GetMapping("/{userId}")
+    fun getUserById(@PathVariable userId: String) = userService.getUserById(userId)
+
+    @GetMapping("/phone/{phoneNumber}")
+    fun getUserByPhone(@PathVariable phoneNumber: String) = userService.getUserByPhone(phoneNumber)
+
 
 }
