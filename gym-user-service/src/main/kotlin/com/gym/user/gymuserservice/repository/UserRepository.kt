@@ -6,4 +6,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource
 
 @RepositoryRestResource
 interface UserRepository: JpaRepository<User, String> {
+
+    fun findByPhoneNumber(phoneNumber: String): User
 }
